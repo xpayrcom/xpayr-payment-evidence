@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpayr.com/schemas/payment-evidence-envelope.v1.json",
+  "title": "XPayr Payment Evidence Envelope v1",
+  "type": "object",
+  "required": ["schema", "envelope_id", "revision", "subject", "intent", "policy", "guard", "quote", "execution", "split", "settlement", "reconciliation", "provenance", "privacy", "integrity"],
+  "properties": {
+    "schema": { "const": "xpayr.payment-evidence-envelope.v1" },
+    "envelope_id": { "type": "string", "pattern": "^pee_[A-Za-z0-9_-]{3,}$" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "subject": { "type": "object" },
+    "intent": { "type": "object" },
+    "policy": { "type": "object" },
+    "guard": { "type": "object" },
+    "quote": { "type": "object" },
+    "execution": { "type": "object" },
+    "split": { "type": ["object", "null"] },
+    "settlement": { "type": "object" },
+    "reconciliation": { "type": "object" },
+    "provenance": { "type": "object" },
+    "privacy": { "type": "object" },
+    "integrity": { "type": "object" }
+  },
+  "additionalProperties": false
+}
