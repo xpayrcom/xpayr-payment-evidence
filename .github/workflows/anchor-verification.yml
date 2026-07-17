@@ -1,0 +1,39 @@
+name: Arc Testnet anchor verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "anchors/**"
+      - "deployments/**"
+      - "examples/**"
+      - "scripts/verify-anchor.mjs"
+      - "src/**"
+  pull_request:
+    paths:
+      - "anchors/**"
+      - "deployments/**"
+      - "examples/**"
+      - "scripts/verify-anchor.mjs"
+      - "src/**"
+  schedule:
+    - cron: "31 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build:known-evidence
+      - run: git diff --exit-code -- examples/
+      - run: npm run verify:arc-testnet

@@ -1,0 +1,16 @@
+{
+  "schema": "xpayr.evidence-registry-deployment.v1",
+  "environment": "arc-testnet",
+  "chain_id": 5042002,
+  "contract_name": "XPayrEvidenceRootRegistry",
+  "contract_address": "0xf2B78A7A32Eb390827D272Dbd175Aa48341646ba",
+  "owner": "0xDC58cEf1cFa68f6f77A1D1Bf07737948929DD5A7",
+  "owner_code_present": false,
+  "owner_activation_state": "deterministic-safe-not-deployed-on-arc-testnet",
+  "initial_publisher": "0x9b10F2a258CE9E24E24f7F1c99d20E5ad689fB79",
+  "deployment_tx_hash": "0x77c7011d796cd6bd126e5abeacd4325327764287f70b5512fd16ac4c912f6e3e",
+  "deployment_block_number": 52296466,
+  "runtime_bytecode_hash": "0x699fb6f38ce84854b771eed934c022430451789a8dc7366ba9d0d26f8a6a62f3",
+  "compiler_version": "0.8.36+commit.8a079791.Emscripten.clang",
+  "explorer_url": "https://testnet.arcscan.app/address/0xf2B78A7A32Eb390827D272Dbd175Aa48341646ba"
+}

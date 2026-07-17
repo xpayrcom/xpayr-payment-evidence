@@ -1,0 +1,16 @@
+{
+  "tree_algorithm": "xpayr.keccak256.sorted-pairs.v1",
+  "leaf_count": 1,
+  "merkle_root": "0x049b78193f72b821cdcb2f2a76f4bba307a184e1dc69f0aa265e7448cba248f2",
+  "manifest_hash": "sha256:20192e46accdad439426b064980c379206ee8ec28464df870f8e1482e162c566",
+  "manifest": [
+    {
+      "leaf_index": 0,
+      "envelope_hash": "sha256:07a51874e72289473911fb46545fb6f9c673c3b79d5a1d28a1efc2a8dd563a5b",
+      "leaf_hash": "0x049b78193f72b821cdcb2f2a76f4bba307a184e1dc69f0aa265e7448cba248f2"
+    }
+  ],
+  "proofs": {
+    "sha256:07a51874e72289473911fb46545fb6f9c673c3b79d5a1d28a1efc2a8dd563a5b": []
+  }
+}

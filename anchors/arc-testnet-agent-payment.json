@@ -1,0 +1,18 @@
+{
+  "schema": "xpayr.payment-evidence-anchor.v1",
+  "environment": "arc-testnet",
+  "chain_id": 5042002,
+  "registry_address": "0xf2B78A7A32Eb390827D272Dbd175Aa48341646ba",
+  "batch_id": "0x5cdc88700dc0ae30242c9d60760e7e4bdd9b5aa3be15cf911b7e7db51ceffece",
+  "merkle_root": "0x049b78193f72b821cdcb2f2a76f4bba307a184e1dc69f0aa265e7448cba248f2",
+  "manifest_hash": "0x20192e46accdad439426b064980c379206ee8ec28464df870f8e1482e162c566",
+  "leaf_count": 1,
+  "publisher": "0x9b10F2a258CE9E24E24f7F1c99d20E5ad689fB79",
+  "published_at": 1784305176,
+  "publication_tx_hash": "0x7ae84fee1f3f00fb96d136aa908be2651743238342dace3fcf4bdf00383614b2",
+  "publication_block_number": 52296505,
+  "envelope_hashes": [
+    "sha256:07a51874e72289473911fb46545fb6f9c673c3b79d5a1d28a1efc2a8dd563a5b"
+  ],
+  "explorer_url": "https://testnet.arcscan.app/tx/0x7ae84fee1f3f00fb96d136aa908be2651743238342dace3fcf4bdf00383614b2"
+}

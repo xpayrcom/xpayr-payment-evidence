@@ -1,0 +1,139 @@
+{
+  "schema": "xpayr.payment-evidence-envelope.v1",
+  "envelope_id": "pee_aep_69f5c185bd5cd0eadcf8ba3d",
+  "revision": 1,
+  "subject": {
+    "type": "agent_checkout",
+    "merchant_ref": "sha256:a9d9513a210c952a212cface4353814dd4b91f6128ca60406a0d658dc3ad76bc",
+    "payment_session_id": "ps_bdbae7a83e6dd680a8ecc455",
+    "proof_id": "aep_69f5c185bd5cd0eadcf8ba3d"
+  },
+  "intent": {
+    "actor_type": "agent",
+    "operation": "checkout_split",
+    "network_key": "arc-testnet",
+    "chain_id": 5042002,
+    "token_symbol": "USDC",
+    "token_address": "0x3600000000000000000000000000000000000000",
+    "token_decimals": 6,
+    "amount_atomic": "10000",
+    "recipient": "0x38d27551428d2d6f8226711E83f612b7784bBBa6",
+    "route_id": "arc-testnet:splitter:v1",
+    "intent_hash": "sha256:39f1a27c208420cefa9b32a90c8223e753f39c982b2aa780dc2be62d64fd936e"
+  },
+  "policy": {
+    "policy_id": "agi_b6941e9931d1c6df8ec2",
+    "policy_version": 1,
+    "policy_hash": "sha256:39f1a27c208420cefa9b32a90c8223e753f39c982b2aa780dc2be62d64fd936e",
+    "decision": "approved",
+    "reason_codes": [
+      "agent_policy_approved"
+    ],
+    "evaluated_at": "2026-07-14T20:59:30Z"
+  },
+  "guard": {
+    "decision_id": "aep_69f5c185bd5cd0eadcf8ba3d",
+    "verdict": "ALLOW",
+    "decision_state": "consumed",
+    "execution_fingerprint": "sha256:39f1a27c208420cefa9b32a90c8223e753f39c982b2aa780dc2be62d64fd936e",
+    "profile": "agent_execution_proof.v1"
+  },
+  "quote": {
+    "quote_id": "afq_ps_bdbae7a83e6dd680a8ecc455",
+    "quote_hash": "sha256:57c18bd701762fa3780b6cac012943e3597791324429a0eeb903258a4ae88f07",
+    "gross_amount_atomic": "10000",
+    "customer_fee_atomic": "0",
+    "platform_fee_atomic": "50",
+    "merchant_net_atomic": "9950",
+    "fee_bps": 50,
+    "fee_recipient": "0xb0bD2f3A86db752dA693D8a686C406E269E57c99",
+    "expires_at": "2026-07-14T20:59:30Z"
+  },
+  "execution": {
+    "tx_hash": "0x3da8cbde64033b3680185bb6b0bed504f159c2d63f51982f9638e5c53825d188",
+    "block_number": 51827646,
+    "block_hash": "0xffd549fe9e0c36b0a337dc5cd03f9d3bbb26d96e778faf23a4f67b780168a1f1",
+    "transaction_index": 4,
+    "log_index": 16,
+    "sender": "0x9b10F2a258CE9E24E24f7F1c99d20E5ad689fB79",
+    "to": "0xa39BA978A44bC761E1134F319FBd5a7B3daA5623",
+    "receipt_status": 1,
+    "confirmation_count": 1,
+    "verifier": {
+      "name": "xpayr_evm_payment_verifier",
+      "version": "v1",
+      "evidence_hash": "sha256:efe194fc3f2d6f1e42e8813beaaf095762b3b71abd430014fd25fe5e9f60ca2a"
+    },
+    "verified_at": "2026-07-14T20:59:30Z"
+  },
+  "split": {
+    "payment_id": "0x6ed65e48a5ffb6f7c78f89ce596de18d293d4c70591d785782d852b66608e393",
+    "platform_fee_atomic": "50",
+    "merchant_net_atomic": "9950",
+    "platform_recipient": "0xb0bD2f3A86db752dA693D8a686C406E269E57c99",
+    "merchant_recipient": "0x38d27551428d2d6f8226711E83f612b7784bBBa6"
+  },
+  "settlement": {
+    "mode": "atomic_split",
+    "route_id": "arc-testnet:splitter:v1",
+    "status": "confirmed",
+    "source_refs": [
+      "gateway_transaction:0x3da8cbde64033b3680185bb6b0bed504f159c2d63f51982f9638e5c53825d188"
+    ],
+    "legs": [
+      {
+        "role": "platform_fee",
+        "recipient": "0xb0bD2f3A86db752dA693D8a686C406E269E57c99",
+        "amount_atomic": "50"
+      },
+      {
+        "role": "merchant_net",
+        "recipient": "0x38d27551428d2d6f8226711E83f612b7784bBBa6",
+        "amount_atomic": "9950"
+      }
+    ],
+    "settled_at": "2026-07-14T20:59:30Z"
+  },
+  "reconciliation": {
+    "payment_status": "completed",
+    "gateway_status": "confirmed",
+    "fee_status": "collected",
+    "webhook": {
+      "event_type": "payment.completed",
+      "status": "delivered",
+      "payload_hash": "sha256:2f50a9e3db67ac51bf8e8ee68a647207beeee410a26fc06589350a898fc4878f"
+    },
+    "checks": {
+      "intent_bound": true,
+      "amount_bound": true,
+      "route_bound": true,
+      "sender_bound": true,
+      "split_reconciled": true
+    },
+    "reconciled_at": "2026-07-14T20:59:30Z"
+  },
+  "provenance": {
+    "environment": "testnet",
+    "xpayr_release": "arc-agentic-economy-e2e-20260714",
+    "chain_manifest_hash": "sha256:922f08aae24afab5b12999f85ec01cf7ac5d32ff46bc99629b13304e467da181",
+    "verifier_artifact_hash": "sha256:efe194fc3f2d6f1e42e8813beaaf095762b3b71abd430014fd25fe5e9f60ca2a",
+    "indexer_fact_hashes": [
+      "sha256:c8d95ff98ba8538a4941dccf9d9ff3b8c486754488f980e89da4296edce32906"
+    ]
+  },
+  "privacy": {
+    "classification": "merchant_shareable",
+    "contains_pii": false,
+    "redacted_fields": [
+      "subject.merchant_ref"
+    ],
+    "retention_class": "payment_audit"
+  },
+  "integrity": {
+    "canonicalization": "RFC8785-JCS",
+    "hash_algorithm": "SHA-256",
+    "previous_revision_hash": null,
+    "created_at": "2026-07-14T20:59:30Z",
+    "envelope_hash": "sha256:07a51874e72289473911fb46545fb6f9c673c3b79d5a1d28a1efc2a8dd563a5b"
+  }
+}
