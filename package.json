@@ -30,7 +30,6 @@
     "url": "https://github.com/xpayrcom/xpayr-payment-evidence/issues"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   }
 }
