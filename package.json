@@ -1,13 +1,25 @@
 {
   "name": "@xpayr/payment-evidence",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Canonical XPayr payment-evidence envelopes and Merkle inclusion proofs.",
   "sideEffects": false,
   "type": "module",
   "license": "MIT",
   "exports": "./src/index.mjs",
-  "bin": { "xpayr-evidence": "./bin/xpayr-evidence.mjs" },
-  "files": ["anchors", "bin", "contracts", "deployments", "examples", "src", "schema", "README.md", "LICENSE"],
+  "bin": {
+    "xpayr-evidence": "./bin/xpayr-evidence.mjs"
+  },
+  "files": [
+    "anchors",
+    "bin",
+    "contracts",
+    "deployments",
+    "examples",
+    "src",
+    "schema",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "build:known-evidence": "node scripts/build-known-evidence.mjs",
@@ -17,10 +29,18 @@
     "verify:arc-testnet": "node scripts/verify-anchor.mjs",
     "check": "npm run build:known-evidence && npm test && npm run compile:registry && npm pack --dry-run"
   },
-  "dependencies": { "ethers": "^6.15.0" },
-  "devDependencies": { "solc": "^0.8.30" },
-  "overrides": { "tmp": "^0.2.7" },
-  "engines": { "node": ">=18" },
+  "dependencies": {
+    "ethers": "^6.15.0"
+  },
+  "devDependencies": {
+    "solc": "^0.8.30"
+  },
+  "overrides": {
+    "tmp": "^0.2.7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xpayrcom/xpayr-payment-evidence.git"
@@ -31,5 +51,17 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "xpayr",
+    "crypto-payment-gateway",
+    "non-custodial",
+    "usdt",
+    "usdc",
+    "mcp-server",
+    "web3-checkout",
+    "tron",
+    "solana",
+    "circle-arc"
+  ]
 }
